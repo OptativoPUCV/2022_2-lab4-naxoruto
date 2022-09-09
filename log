@@ -188,3 +188,23 @@ hashmap.c:48:12: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 449c71d
+Fri 09 Sep 2022 01:30:12 PM UTC: 
+ hashmap.c | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:22: error: ‘i’ undeclared (first use in this function)
+   46 |     if (map->buckets[i] == NULL){
+      |                      ^
+hashmap.c:46:22: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:51:21: error: expected ‘;’ before ‘}’ token
+   51 |     map->current = i
+      |                     ^
+      |                     ;
+   52 |     }
+      |     ~                
+hashmap.c:54:20: error: expected identifier before ‘)’ token
+   54 |     if ( i == map->)
+      |                    ^
+Compilation failed
+2caec70
