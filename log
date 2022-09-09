@@ -16,3 +16,29 @@ hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 d36b933
+Fri 09 Sep 2022 12:46:52 PM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   60 |   long* map->size = 0;
+      |            ^~
+hashmap.c:60:12: error: expected expression before ‘->’ token
+hashmap.c:61:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   61 |   long* map->capacity = capacity;
+      |            ^~
+hashmap.c:61:12: error: expected expression before ‘->’ token
+hashmap.c:62:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   62 |   long* map->current = map->buckets[0];
+      |            ^~
+hashmap.c:62:12: error: expected expression before ‘->’ token
+hashmap.c:58:9: error: unused variable ‘primer_dato’ [-Werror=unused-variable]
+   58 |   char* primer_dato = map->buckets[0]->value;
+      |         ^~~~~~~~~~~
+hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-variable]
+   57 |   char* primera_clave = map->buckets[0]->key;
+      |         ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2361b31

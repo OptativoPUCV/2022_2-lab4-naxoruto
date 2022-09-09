@@ -55,7 +55,13 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity) {
   HashMap * map = (HashMap*)malloc(sizeof(HashMap));
   char* primera_clave = map->buckets[0]->key;
-  char* primer_dato = map->buckets[0]->value; 
+  char* primer_dato = map->buckets[0]->value;
+  
+  long* map->size = 0;
+  long* map->capacity = capacity;
+  long* map->current = map->buckets[0];
+  
+  
   
     return map;
 }
