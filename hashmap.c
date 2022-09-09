@@ -41,11 +41,10 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    
-  while (1){
-    if (map->buckets[i] == NULL){
     Pair * p = createPair(key, value); //
     size_t i = hash(key, map->capacity); // punto donde debe ir guardado
+  while (1){
+    if (map->buckets[i] == NULL){
     map->buckets[i] = p; 
     map->size++;
     map->current = i;
