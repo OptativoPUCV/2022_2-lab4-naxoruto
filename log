@@ -177,3 +177,14 @@ Fri 09 Sep 2022 01:10:58 PM UTC:
  tests:  2|5
 total_score: 20/70
 0b0fd51
+Fri 09 Sep 2022 01:15:47 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:12: error: comparison between pointer and integer [-Werror]
+   48 |   while (i != NULL && key==NULL){
+      |            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+449c71d

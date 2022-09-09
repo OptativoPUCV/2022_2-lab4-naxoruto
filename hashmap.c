@@ -44,10 +44,12 @@ void insertMap(HashMap * map, char * key, void * value) {
   
   Pair * p = createPair(key, value); //
   size_t i = hash(key, map->capacity); // punto donde debe ir guardado
-
-  map->buckets[i] = p; 
-  map->size++;
-  map->current = i; 
+  
+  while (i != NULL && key==NULL){ 
+    map->buckets[i] = p; 
+    map->size++;
+    map->current = i; 
+    }
 }
 
 void enlarge(HashMap * map) {
