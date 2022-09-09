@@ -27,7 +27,7 @@ long hash( char * key, long capacity) {
     unsigned long hash = 0;
      char * ptr;
     for (ptr = key; *ptr != '\0'; ptr++) {
-        hash += hash*32 + tolower(*ptr);
+        hash += hash*32 + tolower(*ptr); //del codigo ASCI a Número
     }
     return hash%capacity;
 }
@@ -41,8 +41,13 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
+  
+  Pair * p = createPair(key, value); //
+  size_t i = hash(key, map->capicity); // punto donde debe ir guardado
 
-
+  map->buckets[i] = p; 
+  map->size++;
+  map->current = i; 
 }
 
 void enlarge(HashMap * map) {
@@ -61,7 +66,7 @@ HashMap * createMap(long capacity) {
   map->size = 0;
   map->current = -1;
 
-    return map;
+  return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    

@@ -160,3 +160,14 @@ Fri 09 Sep 2022 12:59:17 PM UTC:
  tests:  1|5
 total_score: 10/70
 89130fa
+Fri 09 Sep 2022 01:10:49 PM UTC: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:29: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capicity’; did you mean ‘capacity’?
+   46 |   size_t i = hash(key, map->capicity); // punto donde debe ir guardado
+      |                             ^~~~~~~~
+      |                             capacity
+Compilation failed
+2dcb29f
