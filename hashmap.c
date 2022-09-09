@@ -58,8 +58,8 @@ HashMap * createMap(long capacity) {
   char* primer_dato = map->buckets[0]->value;
   
   map->size = 0;
-  long* map->capacity = capacity;
-  long* map->current = map->buckets[0];
+  map->capacity = capacity;
+  map->current = map->buckets[0];
   
   
   

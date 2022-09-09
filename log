@@ -90,3 +90,20 @@ hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 c4f5287
+Fri 09 Sep 2022 12:47:35 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:62:16: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   62 |   map->current = map->buckets[0];
+      |                ^
+hashmap.c:58:9: error: unused variable ‘primer_dato’ [-Werror=unused-variable]
+   58 |   char* primer_dato = map->buckets[0]->value;
+      |         ^~~~~~~~~~~
+hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-variable]
+   57 |   char* primera_clave = map->buckets[0]->key;
+      |         ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fed4993
