@@ -107,3 +107,8 @@ hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 fed4993
+Fri 09 Sep 2022 12:48:12 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  0|0
+deca930
