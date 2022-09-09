@@ -57,7 +57,7 @@ HashMap * createMap(long capacity) {
   char* primera_clave = map->buckets[0]->key;
   char* primer_dato = map->buckets[0]->value;
   
-  long* map.size = 0;
+  map->size = 0;
   long* map->capacity = capacity;
   long* map->current = map->buckets[0];
   
