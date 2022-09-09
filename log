@@ -112,3 +112,20 @@ Fri 09 Sep 2022 12:48:12 PM UTC:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 deca930
+Fri 09 Sep 2022 12:48:50 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:62:16: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   62 |   map->current = map->buckets[0];
+      |                ^
+hashmap.c:58:9: error: unused variable ‘primer_dato’ [-Werror=unused-variable]
+   58 |   char* primer_dato = map->buckets[0]->value;
+      |         ^~~~~~~~~~~
+hashmap.c:57:9: error: unused variable ‘primera_clave’ [-Werror=unused-variable]
+   57 |   char* primera_clave = map->buckets[0]->key;
+      |         ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f004134
