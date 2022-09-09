@@ -208,3 +208,17 @@ hashmap.c:54:20: error: expected identifier before ‘)’ token
       |                    ^
 Compilation failed
 2caec70
+Fri 09 Sep 2022 01:30:28 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:22: error: ‘i’ undeclared (first use in this function)
+   46 |     if (map->buckets[i] == NULL){
+      |                      ^
+hashmap.c:46:22: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:54:20: error: expected identifier before ‘)’ token
+   54 |     if ( i == map->)
+      |                    ^
+Compilation failed
+c6d8dc0

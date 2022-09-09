@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     size_t i = hash(key, map->capacity); // punto donde debe ir guardado
     map->buckets[i] = p; 
     map->size++;
-    map->current = i
+    map->current = i;
     }
     i++;
     if ( i == map->)
