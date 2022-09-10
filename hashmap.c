@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->buckets[i] = p; 
     map->size++;
     map->current = i;
-    break;
+    return;
     }
     i++;
   }  
