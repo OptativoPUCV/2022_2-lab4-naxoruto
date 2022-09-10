@@ -94,6 +94,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (i == map->capacity){
       i=0;
     }
+    map->current = i;
   }
   
   return NULL;
