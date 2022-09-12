@@ -311,3 +311,14 @@ Mon 12 Sep 2022 03:00:55 AM UTC:
  tests:  14|1
 total_score: 60/70
 e93f884
+Mon 12 Sep 2022 03:01:05 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+test.c: In function ‘firstMap’:
+hashmap.c:135:19: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+  135 |   if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
+      |                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+723623e

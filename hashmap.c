@@ -132,7 +132,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
   size_t i;
-  //if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
+  if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
   for(i = 0; i < map->capacity; i++){
     if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){ 
       map->current = i;
