@@ -322,3 +322,9 @@ hashmap.c:135:19: error: ‘i’ is used uninitialized in this function [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 723623e
+Mon 12 Sep 2022 03:01:14 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  14|1
+total_score: 60/70
+4637eeb
