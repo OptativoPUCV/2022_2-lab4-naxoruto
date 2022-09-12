@@ -143,16 +143,13 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  size_t i = 0;
-
-  while(1){
-    if (map->buckets[i+1] == NULL || map->buckets == NULL) return NULL; //si es nulo, se va
-    if (map->buckets[i+1] != NULL){
-      map->current = i;
+  size_t i=0;
+  if (map->buckets[i+1] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
+  for(i = 0; i < map->capacity; i++){
+    if (map->buckets[i+1] != NULL && map->buckets[i+1]->key != NULL){ 
+      map->current = i+1;
       return map->buckets[i+1];
     }
-    i++;
   }
-  
-    return NULL;
+  return NULL;
 }
