@@ -132,19 +132,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
   size_t i = 0;
-  size_t cont = 0;
 
   while(1){
-    if (map->buckets[i] == NULL || map->buckets == NULL) return NULL;
-    if (map->buckets[i] != NULL){
+    if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
+    if (map->buckets[i] != NULL){ //si el primer dato no es NULL, entra
       map->current = i;
       return map->buckets[i];
-    }
-    i++;
-    cont++;
-    if (cont == map->capacity) break;
-    if (i == map->capacity){
-      i=0;
     }
   }
   map->current = 0;
@@ -155,7 +148,7 @@ Pair * nextMap(HashMap * map) {
   size_t i = 0;
 
   while(1){
-    if (map->buckets[i+1] == NULL || map->buckets == NULL) return NULL;
+    if (map->buckets[i+1] == NULL || map->buckets == NULL) return NULL; //si es nulo, se va
     if (map->buckets[i+1] != NULL){
       map->current = i;
       return map->buckets[i+1];
