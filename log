@@ -271,3 +271,9 @@ Sat 10 Sep 2022 08:26:45 PM UTC:
  tests:  5|5
 total_score: 20/70
 a79fd30
+Mon 12 Sep 2022 02:55:42 AM UTC: 
+ hashmap.c | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 58 insertions(+), 2 deletions(-)
+ tests:  13|1
+total_score: 60/70
+5cff518
