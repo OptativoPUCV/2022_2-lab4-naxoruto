@@ -132,15 +132,13 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
   size_t i = 0;
-
-  while(1){
-    if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
-    if (map->buckets[i] != NULL){ //si el primer dato no es NULL, entra
+  if (map->buckets[i] == NULL || map->buckets == NULL) return NULL; // Si no hay lista, se va
+  for (i ; i < map->capacity; i++){
+    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){ //si el primer dato no es NULL, entra
       map->current = i;
       return map->buckets[i];
     }
   }
-  map->current = 0;
   return NULL;
 }
 
